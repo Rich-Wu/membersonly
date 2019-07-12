@@ -1,0 +1,19 @@
+{
+  "name": "membersonly",
+  "version": "1.0.0",
+  "description": "Project implementing user authentication and a noSQL database to show user posts selectively",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Rich-Wu/membersonly.git"
+  },
+  "author": "Rich-Wu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Rich-Wu/membersonly/issues"
+  },
+  "homepage": "https://github.com/Rich-Wu/membersonly#readme"
+}
