@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  h1= title
+  
+  form(action='' method='POST')
+    div.form-group
+      input#email.form-control(type='email' placeholder='E-mail' name='email' required=true)
+    div.form-group
+      input#password.form-control(type='password' placeholder='Password' name='password' required=true)
+    button.btn.btn-primary(type='submit') Log In
