@@ -15,4 +15,4 @@ UserSchema.virtual('name').get(() => {
   return `${this.first_name} ${this.last_name}`;
 });
 
-module.exports = mongoose.model('Post', PostSchema);
+module.exports = mongoose.model('User', UserSchema);
