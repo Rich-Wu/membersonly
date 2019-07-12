@@ -13,6 +13,8 @@ require('dotenv').config();
 
 const app = express();
 
+const baseRoutes = require('./routes/baseRouter');
+
 // Connect to MongoDB
 const mongoDB = process.env.dbInfo;
 mongoose.connect(mongoDB, { useNewUrlParser: true });
@@ -35,3 +37,7 @@ app.use(sassMiddleware({
   sourceMap: true
 }));
 app.use(express.static(path.join(__dirname, 'public')));
+
+app.use('/', baseRoutes);
+
+app.listen(3000, () => console.log(`app listening on port 3000!`));
