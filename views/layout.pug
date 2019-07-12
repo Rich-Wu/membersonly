@@ -10,15 +10,16 @@ html(lang='en')
     link(rel='stylesheet', href='/stylesheets/style.css')
   body
     block navbar
-    nav(class='navbar')
-      div(class='container-fluid')
-        ul(class='navbar-nav')
-          li 
-            a(href='/') Home
-          li 
-            a(href='/post/new') Create Post
-          li 
-            a(href='/login') Login
-          li 
-            a(href='/signup') Sign Up
-    block content
+      nav(class='navbar navbar-default')
+        div(class='container-fluid')
+          ul(class='nav navbar-nav')
+            li 
+              a(href='/') Home
+            li 
+              a(href='/post/new') Create Post
+            li 
+              a(href='/login') Login
+            li 
+              a(href='/signup') Sign Up
+      div(class='container')
+        block content
