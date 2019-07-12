@@ -4,6 +4,11 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const sassMiddleware = require('node-sass-middleware');
+const mongoose = require('mongoose');
+const passport = require("passport");
+const bcrypt = require('bcryptjs');
+const LocalStrategy = require("passport-local").Strategy;
+const router = express.Router();
 require('dotenv').config();
 
 const app = express();
@@ -19,8 +24,6 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(auth());
-
 app.use(sassMiddleware({
   src: path.join(__dirname, 'public'),
   dest: path.join(__dirname, 'public'),
